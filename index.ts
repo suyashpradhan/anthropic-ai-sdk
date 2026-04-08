@@ -25,7 +25,7 @@ content: `Write a git commit message for this diff.
       }
     ]
   });
-    console.log(msg.content[0].type);
+    console.log((msg.content[0] as Anthropic.TextBlock).text);
 }
 
 main().catch(console.error);
